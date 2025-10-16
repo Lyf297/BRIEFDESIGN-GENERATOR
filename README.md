@@ -1,7 +1,6 @@
 # ✏️ Brief Design Generator — LYF
 
 > Aplikasi web yang membantu kamu membuat *design brief* dengan cepat & terstruktur 
-> Tema warna: biru & hitam — modern, bersih, profesional.
 
 ---
 
