@@ -40,4 +40,4 @@ Kalau kamu mau jalanin lokal:
 
 1. Clone repository:  
    ```bash
-   git clone https://github.com/Lyf297/BRIEFDESIGN-GENERATOR.git
+   git clone https://github.com/Lyf297/brief-design-generator.git
