@@ -11,7 +11,7 @@ Brief Design Generator adalah tool web yang memungkinkan pengguna menyusun brief
 Kamu tinggal isi detail yang dibutuhkan, dan aplikasi akan menghasilkan draft brief yang siap digunakan/desebarluaskan.
 
 Coba langsung di:  
-🌐 [https://lyf297.github.io/BRIEFDESIGN-GENERATOR/](https://lyf297.github.io/BRIEFDESIGN-GENERATOR/)
+🌐 [https://lyf297.github.io/BRIEFDESIGN-GENERATOR/](https://lyf297.github.io/brief-design-generator/)
 
 ---
 
