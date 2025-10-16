@@ -22,7 +22,6 @@ Coba langsung di:
 | Frontend | HTML5, CSS3, JavaScript |
 | Penyimpanan | (opsional) localStorage / sessionStorage |
 | Hosting | GitHub Pages |
-| Styling | Warna utama biru + hitam |
 
 ---
 
@@ -32,7 +31,7 @@ Coba langsung di:
 - Otomatis generate teks brief berdasarkan input  
 - Kemampuan **copy ke clipboard** agar mudah disalin  
 - Tampilan responsif agar bisa dipakai di mobile & desktop  
-- Preview hasil brief sebelum disalin  
+- Preview hasil brief sebelum disalin
 
 ---
 
