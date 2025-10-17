@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Design Brief Generator</title>
+<title>Design Brief Builder</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
   <header>
-    <h1>Design Brief Generator</h1>
+    <h1>Design Brief Builder</h1>
     <p class="muted">Isi form — preview otomatis keisi. Ekspor ke PDF / PNG.</p>
   </header>
 
@@ -134,97 +134,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="script.js"></script>
 </body>
-            </html>
-              <div class="brief-row">
-                <div class="brief-col">
-                  <h3>Target / Tujuan</h3>
-                  <p id="vGoal">—</p>
-                </div>
-                <div class="brief-col">
-                  <h3>Konsep Perancangan</h3>
-                  <p id="vConcept">—</p>
-                </div>
-              </div>
-
-              <div class="brief-row">
-                <div class="brief-col">
-                  <h3>Ruang Lingkup</h3>
-                  <p id="vScope">—</p>
-                </div>
-                <div class="brief-col">
-                  <h3>Media</h3>
-                  <p id="vMedia">—</p>
-                </div>
-              </div>
-
-              <div class="brief-row">
-                <div class="brief-col full">
-                  <h3>Tanggal Penyelesaian</h3>
-                  <p id="vDeadline">—</p>
-                </div>
-              </div>
-            </div>
-
-            <footer class="doc-footer">
-               BRIEF DESIGN 
-            </footer>
-          </article>
-        </div>
-      </section>
-
-      <!-- FORM -->
-      <section class="panel form-panel">
-        <form id="briefForm">
-          <label>Nama Brand / Perusahaan
-            <input type="text" name="brand" required placeholder="Contoh: TOKO KITA" />
-          </label>
-
-          <label>Latar Belakang
-            <textarea name="background" rows="3"></textarea>
-          </label>
-
-          <label>Sasaran Brand / Perusahaan
-            <textarea name="audience" rows="2"></textarea>
-          </label>
-
-          <label>Target / Tujuan Project
-            <textarea name="goal" rows="2"></textarea>
-          </label>
-
-          <label>Konsep Perancangan
-            <textarea name="concept" rows="3"></textarea>
-          </label>
-
-          <label>Ruang Lingkup Project
-            <textarea name="scope" rows="2"></textarea>
-          </label>
-
-          <label>Media yang Digunakan
-            <input type="text" name="media" />
-          </label>
-
-          <label>Tanggal & Waktu Penyelesaian
-            <input type="datetime-local" name="deadline" />
-          </label>
-
-          <hr>
-
-          <div class="actions">
-            <button type="button" id="exportPdf">Download PDF</button>
-            <button type="button" id="exportPng">Download PNG</button>
-            <button type="reset" id="resetBtn">Reset</button>
-          </div>
-        </form>
-      </section>
-    </main>
-
-    <footer class="page-footer">
-      <small>LYF || BRIEF DESIGN GENERATOR</small>
-    </footer>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+  </html>
