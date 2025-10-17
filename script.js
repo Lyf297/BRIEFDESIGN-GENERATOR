@@ -1,80 +1,77 @@
-(function(){
-  const form = document.getElementById('briefForm');
-  const fields = {
-    brand: form.brand,
-    background: form.background,
-    audience: form.audience,
-    goal: form.goal,
-    concept: form.concept,
-    scope: form.scope,
-    media: form.media,
-    deadline: form.deadline
-  };
+const briefForm = document.getElementById('briefForm');
 
-  const v = {
-    brand: document.getElementById('vBrand'),
-    background: document.getElementById('vBackground'),
-    audience: document.getElementById('vAudience'),
-    goal: document.getElementById('vGoal'),
-    concept: document.getElementById('vConcept'),
-    scope: document.getElementById('vScope'),
-    media: document.getElementById('vMedia'),
-    deadline: document.getElementById('vDeadline')
-  };
+// Mapping ID preview
+const previewIds = {
+  brand: 'vBrand',
+  background: 'vBackground',
+  audience: 'vAudience',
+  goal: 'vGoal',
+  concept: 'vConcept',
+  scope: 'vScope',
+  media: 'vMedia',
+  deadline: 'vDeadline'
+};
 
-  function updatePreview() {
-    v.brand.textContent = fields.brand.value || 'Nama Brand';
-    v.background.textContent = fields.background.value || '—';
-    v.audience.textContent = fields.audience.value || '—';
-    v.goal.textContent = fields.goal.value || '—';
-    v.concept.textContent = fields.concept.value || '—';
-    v.scope.textContent = fields.scope.value || '—';
-    v.media.textContent = fields.media.value || '—';
+// Default preview jika form kosong
+const defaultValues = {
+  brand: 'Brand',
+  background: '-',
+  audience: '-',
+  goal: '-',
+  concept: '-',
+  scope: '-',
+  media: '-',
+  deadline: '-'
+};
 
-    if (fields.deadline.value) {
-      const date = new Date(fields.deadline.value);
-      const formatted = date.toLocaleDateString('id-ID', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-      });
-      v.deadline.textContent = formatted;
-    } else {
-      v.deadline.textContent = '—';
-    }
-  }
+// Format datetime-local ke string readable
+function formatDateTime(value) {
+  if (!value) return '';
+  const d = new Date(value);
+  return d.toLocaleDateString('id-ID', { day:'2-digit', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit' });
+}
 
-  Object.values(fields).forEach(f => f.addEventListener('input', updatePreview));
-  updatePreview();
-
-  async function exportPNG() {
-    const node = document.getElementById('briefDoc');
-    const canvas = await html2canvas(node, { scale: 2, useCORS: true });
-    canvas.toBlob(function(blob){
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = (fields.brand.value || 'brief') + '.png';
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-  }
-
-  async function exportPDF() {
-    const node = document.getElementById('briefDoc');
-    const canvas = await html2canvas(node, { scale: 2, useCORS: true });
-    const img = canvas.toDataURL('image/png');
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF('p','mm','a4');
-    const w = 210;
-    const h = 297;
-    pdf.addImage(img,'PNG',0,0,w,h);
-    pdf.save((fields.brand.value || 'brief') + '.pdf');
-  }
-
-  document.getElementById('exportPdf').addEventListener('click', exportPDF);
-  document.getElementById('exportPng').addEventListener('click', exportPNG);
-  document.getElementById('resetBtn').addEventListener('click', () => {
-    setTimeout(updatePreview, 50);
+// Update preview otomatis
+function updatePreview() {
+  Object.keys(previewIds).forEach(key => {
+    const el = document.getElementById(previewIds[key]);
+    let val = briefForm[key]?.value.trim() || '';
+    if (!val) val = defaultValues[key];
+    if (key === 'deadline') val = formatDateTime(val);
+    el.textContent = val;
   });
-})();
+}
+
+// Event listener
+briefForm.addEventListener('input', updatePreview);
+document.getElementById('resetBtn').addEventListener('click', () => setTimeout(updatePreview, 0));
+
+// Export PDF (A4)
+document.getElementById('exportPdf').addEventListener('click', () => {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF('portrait', 'pt', 'a4');
+  const element = document.getElementById('briefDoc');
+
+  // Hitung skala agar A4
+  html2canvas(element, { scale:2, useCORS:true }).then(canvas => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdfWidth = doc.internal.pageSize.getWidth();
+    const pdfHeight = doc.internal.pageSize.getHeight();
+    doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    doc.save('brief-design.pdf');
+  });
+});
+
+// Export PNG (A4)
+document.getElementById('exportPng').addEventListener('click', () => {
+  const element = document.getElementById('briefDoc');
+  html2canvas(element, { scale:2, useCORS:true }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = 'brief-design.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+});
+
+// Inisialisasi preview
+updatePreview();
