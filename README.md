@@ -1,10 +1,10 @@
-# ✏️ Brief Design Generator 
+#  Brief Design Generator 
 
 > Aplikasi web yang membantu kamu membuat *design brief* dengan cepat & terstruktur 
 
 ---
 
-## 🧾 Tentang Proyek
+##  Tentang Proyek
 
 Brief Design Generator adalah tool web yang memungkinkan pengguna menyusun brief desain (untuk logo, poster, UI, dll) dengan mudah lewat formulir.  
 Kamu tinggal isi detail yang dibutuhkan, dan aplikasi akan menghasilkan draft brief yang siap digunakan/desebarluaskan.
@@ -14,7 +14,7 @@ Coba langsung di:
 
 ---
 
-## 🛠️ Teknologi & Stack
+##  Teknologi & Stack
 
 | Bagian | Teknologi / Tools |
 |--------|--------------------|
@@ -24,7 +24,7 @@ Coba langsung di:
 
 ---
 
-## 🎯 Fitur Utama
+##  Fitur Utama
 
 - Form input detail brief: nama proyek, target audiens, warna, gaya, deskripsi, dll  
 - Otomatis generate teks brief berdasarkan input  
@@ -33,11 +33,3 @@ Coba langsung di:
 - Preview hasil brief sebelum disalin
 
 ---
-
-## 🚀 Cara Menjalankan (Local)
-
-Kalau kamu mau jalanin lokal:
-
-1. Clone repository:  
-   ```bash
-   git clone https://github.com/Lyf297/brief-design-generator.git
