@@ -1,4 +1,4 @@
-# ✏️ Brief Design Generator — LYF
+# ✏️ Brief Design Generator 
 
 > Aplikasi web yang membantu kamu membuat *design brief* dengan cepat & terstruktur 
 
