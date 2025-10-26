@@ -1,35 +1,38 @@
-#  Brief Design Generator 
+# 🧾 Brief Design Generator  
 
-> Aplikasi web yang membantu kamu membuat *design brief* dengan cepat & terstruktur 
-
----
-
-##  Tentang Proyek
-
-Brief Design Generator adalah tool web yang memungkinkan pengguna menyusun brief desain (untuk logo, poster, UI, dll) dengan mudah lewat formulir.  
-Kamu tinggal isi detail yang dibutuhkan, dan aplikasi akan menghasilkan draft brief yang siap digunakan/desebarluaskan.
-
-Coba langsung di:  
-🌐 [https://lyf297.github.io/brief-design-generator/](https://lyf297.github.io/brief-design-generator/)
+> Aplikasi web yang membantu kamu membuat *design brief* dengan cepat & terstruktur ✨  
 
 ---
 
-##  Teknologi & Stack
+## 🧠 Tentang Proyek  
 
-| Bagian | Teknologi / Tools |
-|--------|--------------------|
-| Frontend | HTML5, CSS3, JavaScript |
-| Penyimpanan | (opsional) localStorage / sessionStorage |
-| Hosting | GitHub Pages |
+**Brief Design Generator** adalah tool berbasis web yang memudahkan kamu dalam menyusun *brief desain* — mulai dari logo, poster, hingga UI/UX — hanya lewat satu formulir sederhana.  
+
+Isi beberapa detail penting seperti nama proyek, target audiens, gaya visual, dan deskripsi, lalu biarkan aplikasi ini menghasilkan draft brief yang siap kamu gunakan atau bagikan ke klien! 💡  
+
+🔗 Coba langsung di sini:  
+🌐 [https://lyf297.github.io/brief-design-generator/](https://lyf297.github.io/brief-design-generator/)  
 
 ---
 
-##  Fitur Utama
+## ⚙️ Teknologi & Stack  
 
-- Form input detail brief: nama proyek, target audiens, warna, gaya, deskripsi, dll  
-- Otomatis generate teks brief berdasarkan input  
-- Kemampuan **copy ke clipboard** agar mudah disalin  
-- Tampilan responsif agar bisa dipakai di mobile & desktop  
-- Preview hasil brief sebelum disalin
+| 🧩 Bagian | 🛠️ Teknologi / Tools |
+|------------|----------------------|
+| Frontend | 💻 HTML5, CSS3, JavaScript |
+| Penyimpanan | 🗃️ localStorage / sessionStorage *(opsional)* |
+| Hosting | ☁️ GitHub Pages |
+
+---
+
+## 🌟 Fitur Utama  
+
+✨ Beberapa fitur keren yang tersedia:
+
+- 📝 **Form Input Detail Brief** — isi nama proyek, target audiens, warna, gaya, dan deskripsi dengan mudah  
+- ⚡ **Generate Otomatis** — hasilkan teks *design brief* lengkap secara instan  
+- 📋 **Copy ke Storage** — salin hasil brief hanya dengan satu klik  
+- 🖥️ **Preview Hasil Brief** — lihat tampilan sebelum disalin atau disimpan  
+- 📱 **Tampilan Responsif** — nyaman digunakan di mobile maupun desktop  
 
 ---
